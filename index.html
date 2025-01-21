@@ -12,6 +12,15 @@
 		color: red;
 	}
 </script>
+<button onclick="chiudi()">chiudi</button>
+
+<script type='text/javascript'>
+	function chiudi(){
+	embeddedservice_bootstrap.userVerificationAPI.clearSession(true).then(() => {
+		embeddedservice_bootstrap.utilAPI.removeAllComponents()
+	  });
+	}
+</script>
 <script type='text/javascript'>
 	function initEmbeddedMessaging() {
 		try {
