@@ -77,6 +77,12 @@ window.addEventListener("onEmbeddedMessagingReady", () => {
   });
 </script> -->
 <script>
+window.addEventListener("onEmbeddedMessagingConversationStarted", (result) => {
+	console.log("Received the onEmbeddedMessagingConversationStarted event…");
+	console.log(result)
+  });
+</script>
+<script>
 function lancia(){
 	console.log("Received the onEmbeddedMessagingReady event…");
 	launchChat();
