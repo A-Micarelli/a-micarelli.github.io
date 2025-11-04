@@ -21,7 +21,7 @@
 		});
 	}
 </script>
-<script type='text/javascript'>
+<!-- <script type='text/javascript'>
 	function initEmbeddedMessaging() {
 		try {
 			embeddedservice_bootstrap.settings.language = 'it'; // For example, enter 'en' or 'en-US'
@@ -38,12 +38,12 @@
 			console.error('Error loading Embedded Messaging: ', err);
 		}
 	};
-</script>
-<!-- <script type='text/javascript'>
+</script> -->
+<script type='text/javascript'>
 	function initEmbeddedMessaging() {
 		try {
 			embeddedservice_bootstrap.settings.language = 'it'; // For example, enter 'en' or 'en-US'
-
+			embeddedservice_bootstrap.prechatAPI.setHiddenPrechatFields({"Origin" : "LiveChat"});
 			embeddedservice_bootstrap.init(
 				'00DbX0000002SbJ',
 				'UB_Website',
@@ -56,9 +56,9 @@
 			console.error('Error loading Embedded Messaging: ', err);
 		}
 	};
-</script> -->
-<!-- <script type='text/javascript' src='https://enterprise-business-7016--ubrokeruat.sandbox.my.site.com/ESWUBWebsite1730991064003/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script> -->
-<script type='text/javascript' src='https://ubroker.my.site.com/ESWSmartEnergyAssistenza1739446615272/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
+</script>
+<script type='text/javascript' src='https://enterprise-business-7016--ubrokeruat.sandbox.my.site.com/ESWUBWebsite1730991064003/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
+<!-- <script type='text/javascript' src='https://ubroker.my.site.com/ESWSmartEnergyAssistenza1739446615272/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script> -->
 // Call Launch Chat API.
 <script>
     function launchChat() {
