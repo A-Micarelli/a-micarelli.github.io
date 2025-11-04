@@ -43,7 +43,11 @@
 	function initEmbeddedMessaging() {
 		try {
 			embeddedservice_bootstrap.settings.language = 'it'; // For example, enter 'en' or 'en-US'
-			embeddedservice_bootstrap.prechatAPI.setHiddenPrechatFields({"Origin" : "LiveChat"});
+			window.addEventListener("onEmbeddedMessagingReady", () => {
+				console.log("Received onEmbeddedMessagingReady event inside initembeddedMessaging. Setting origin");
+				lembeddedservice_bootstrap.prechatAPI.setHiddenPrechatFields({"Origin" : "LiveChat"});
+			  });
+			
 			embeddedservice_bootstrap.init(
 				'00DbX0000002SbJ',
 				'UB_Website',
@@ -103,7 +107,7 @@ window.addEventListener("onEmbeddedMessagingConversationStarted", (result) => {
 </script>
 <script>
 function lancia(){
-	console.log("Received the onEmbeddedMessagingReady event…");
+	console.log("start button clicked");
 	launchChat();
 	// The JavaScrip API is ready for calls.
   }
