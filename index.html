@@ -45,7 +45,7 @@
 			embeddedservice_bootstrap.settings.language = 'it'; // For example, enter 'en' or 'en-US'
 			window.addEventListener("onEmbeddedMessagingReady", () => {
 				console.log("Received onEmbeddedMessagingReady event inside initembeddedMessaging. Setting origin");
-				lembeddedservice_bootstrap.prechatAPI.setHiddenPrechatFields({"Origin" : "LiveChat"});
+				embeddedservice_bootstrap.prechatAPI.setHiddenPrechatFields({"Origin" : "LiveChat"});
 			  });
 			
 			embeddedservice_bootstrap.init(
